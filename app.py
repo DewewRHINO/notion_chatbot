@@ -1,13 +1,13 @@
 import time
 import streamlit as st
-from utils import load_chain
+from utils import load_chain, check_query
 
 # Custom image for the app icon and the assistant's avatar
-company_logo = 'https://blendle.com/img/packaging/android-touch-icon-196x196.png'
+company_logo = 'https://www.calpolyswift.org/assets/images/eboard/Kenneth%20Cher.jpg'
 
 # Configure streamlit page
 st.set_page_config(
-    page_title="Your Notion Chatbot",
+    page_title="Jeremiah",
     page_icon=company_logo
 )
 
@@ -18,8 +18,8 @@ if 'chain' not in st.session_state:
 # Initialize chat history
 if 'messages' not in st.session_state:
     # Start with first message from assistant
-    st.session_state['messages'] = [{"role": "assistant", 
-                                  "content": "Hi human! I am Blendle's smart AI. How can I help you today?"}]
+    st.session_state['messages'] = [{"role": "system", 
+                                  "content": "You are the expert on Terrestrial Weapons, using the Wiki for information. this wiki was meant for consumers so no sensitive information should be leaked."}]
 
 # Display chat messages from history on app rerun
 # Custom avatar for the assistant, default avatar for user
@@ -33,6 +33,7 @@ for message in st.session_state.messages:
 
 # Chat logic
 if query := st.chat_input("Ask me anything"):
+        
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": query})
     # Display user message in chat message container
