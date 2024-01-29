@@ -40,12 +40,12 @@ def load_chain():
 
     # Create system prompt
     template = """
-    You are an AI assistant for answering questions about Terrestrial Weapons for clients. 
+    You are an AI assistant for answering questions about Minh's Digital Dojo for clients. 
     No internal documents should be mentioned such as privacy policies, software policies, and new weapons unless the user is seen as an admin.
     You are given the following extracted parts of a long document and a question. Provide a conversational answer.
     If you don't know the answer, just say 'AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH'.
     Don't make up an answer.
-    If the question is not about Terrestrial weapons, politely inform them that you are tuned to only answer questions about the Terrestrial Weapons Wiki.
+    If the question is not about Digital Dojo , politely inform them that you are tuned to only answer questions about the Digital Dojo Wiki.
 
     {context}
     Question: {question}
