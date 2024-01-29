@@ -3,11 +3,11 @@ import streamlit as st
 from utils import load_chain, check_query
 
 # Custom image for the app icon and the assistant's avatar
-company_logo = 'https://www.calpolyswift.org/assets/images/eboard/Kenneth%20Cher.jpg'
+company_logo = 'https://media.licdn.com/dms/image/D5603AQGArYlIrUfmHg/profile-displayphoto-shrink_200_200/0/1689743448626?e=1712188800&v=beta&t=2UzYe5l8cKMIhWt7uR21N41dYcjYgByTF80kxfVpwp0'
 
 # Configure streamlit page
 st.set_page_config(
-    page_title="Jeremiah",
+    page_title="Minh's Digital Dojo ChatBot",
     page_icon=company_logo
 )
 
@@ -19,7 +19,7 @@ if 'chain' not in st.session_state:
 if 'messages' not in st.session_state:
     # Start with first message from assistant
     st.session_state['messages'] = [{"role": "system", 
-                                  "content": "You are the expert on Terrestrial Weapons, using the Wiki for information. this wiki was meant for consumers so no sensitive information should be leaked."}]
+                                  "content": "Hello! I am Minh Tran's assistant, Minh Tran. I am here to answer any questions you may have about Minh or anything about his dojo."}]
 
 # Display chat messages from history on app rerun
 # Custom avatar for the assistant, default avatar for user
